@@ -512,6 +512,8 @@ chk_clim <- function() {
 chk_soil <- function(){
 
   eval.parent(quote({
+    soil <- as.data.frame(soil)
+
     # soil names
     if (is.null(soil)) {
       if (is.null(param_b90$soil_nodes) | is.null(param_b90$soil_materials)) {
